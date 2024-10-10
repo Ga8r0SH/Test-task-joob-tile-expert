@@ -1,0 +1,95 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #426ae0;
+    
+
+    .logo {
+        font-size: 24px;
+        color:#fff;
+
+        font-weight: bold;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+        
+
+        a {
+            text-decoration: none;
+            color:#fff;
+            font-size: medium;
+        }
+    }
+
+    .search-icon {
+        cursor: pointer;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .user-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+    }
+
+    .search-input-container {
+        position: absolute;
+        right: 410px;
+        width: 800px;
+        overflow: hidden;
+
+        transition: width 0.3s ease;
+
+        &.open {
+            width: 500px;
+            /* Задаем ширину при открытом состоянии */
+        }
+
+        &.slide {
+            width: 0;
+            /* Ширина инпута при закрытом состоянии */
+        }
+
+        input {
+            
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            
+            transition: opacity 0.3s ease;
+            opacity: 1;
+       
+
+            &:focus {
+                outline: none;
+              
+            }
+        }
+
+        .filter-panel {
+            display: none;
+            position: absolute;
+            top: -50px;
+
+            &.open {
+                display: block;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 414px) {
+    /* Адаптивные стили для мобильных устройств */
+}

@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="logo">TILE.EXPERT</div>
+    <nav class="nav-links">
+        <a href="#">Контакты</a>
+        <a href="#">Теги</a>
+        <a href="#">Просьбы</a>
+        <a href="#">Избранное</a>
+        <a href="#">Посещения</a>
+    </nav>
+    <div class="search-icon" (click)="toggleSearchInput()">
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="icons">
+        <i class="fas fa-comment"></i>
+        <i class="fas fa-bell"></i>
+        <div class="user-avatar"></div>
+    </div>
+
+    <div class="search-input-container" [class.open]="isSearchOpen" [class.slide]="isSearchOpen">
+        <input type="text" placeholder="Поиск..." (focus)="toggleFilterPanel(true)" (blur)="toggleFilterPanel(false)">
+    </div>
+</header>
